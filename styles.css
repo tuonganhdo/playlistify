@@ -4,6 +4,8 @@ regular = font-weight: 500
 demi = font-weight: 600
 bold = font-weight: 800*/
 
+/*  */
+
 html {
     background-image: url("https://github.com/tuonganhdo/playlistify/blob/main/Background.png?raw=true");
     background-position: center top fixed;
@@ -11,7 +13,6 @@ html {
     background-size: cover;
     width: 100%;
     height: 100%;
-    overscroll-behavior: contain;
 }
 
 body {
@@ -20,18 +21,29 @@ body {
 
     margin: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 
-header {
+header, footer {
     width: 90%;
     margin: 0 auto;
-    margin-top: 4%;
+    height: 5%;
 }
 
-.header, p, .generate-by {
-    display: inline-block;
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.header-buttons, p, .generate-by {
+    
     width: 100%;
+}
+
+p {
+    display: inline-block;
 }
 
 .playlistify, .log-out {
@@ -42,19 +54,33 @@ header {
 
 .playlistify {
     text-align: left;
-    float: left;
 }
 
 .log-out {
     text-align: right;
 }
 
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    text-align: center;
+    font-weight: 400;
+}
+
+.made-with-love {
+    height: 100%;
+    margin: 0;
+}
+
 .main {
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 90%;
     width: 70%;
 }
 
