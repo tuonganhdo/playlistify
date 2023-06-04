@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Playlistify</title>
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -12,14 +13,32 @@
     <body>
         <header>
             <article class="header-buttons">
-                <p class="playlistify">playlistify</p><p class="log-out">log out</p>
+                <a href="#" class="playlistify">playlistify</a>
+                <div class="dropdown">
+                    <label class="dropdown__face">
+                        <div class="dropdown__text">Generate by</div>
+                        <div class="dropdown__arrow"></div>
+                    </label>
+                    <div class="dropdown__items">
+                        <p class="page-nav-empty"></p>
+                        <a class="page-nav-prompt" href="#">Prompt</a>
+                        <a href="#">Playlist/Song</a>
+                    </div>
+                </div>
+                <a href="#" class="log-out">log out</a>
             </article>
         </header>
         <div class="main">
-            <h1>PLAYLISTIFY</h1>
+            <div class="main-content">
+                <h1>PLAYLISTIFY</h1>
+                <div class="search">
+                    <p>Select a playlist generation option</p>
+                    <a href="#" class="go" >GO</a>
+                </div>
+            </div>
         </div>
         <footer>
-            <p class="made-with-love">Made with &lt;3 by tuonganhdo</p>
+            <p class="made-with-love">Made with &lt;3 by&nbsp<a class="made-with-love" target="_blank" href="https://github.com/tuonganhdo">tuonganhdo</a></p>
         </footer>
     </body>
 </html>

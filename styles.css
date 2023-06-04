@@ -8,7 +8,7 @@ bold = font-weight: 800*/
 
 html {
     background-image: url("https://github.com/tuonganhdo/playlistify/blob/main/Background.png?raw=true");
-    background-position: center top fixed;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -25,65 +25,230 @@ body {
 }
 
 header, footer {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    height: 5%;
+    display: flex;
+    justify-content: center;
+    height: 7%;
 }
 
 /* header */
 header {
-    display: flex;
-    justify-content: center;
     align-items: flex-end;
 }
 
-.header-buttons, p, .generate-by {
-    
-    width: 100%;
-}
-
-p {
-    display: inline-block;
+.header-buttons, .dropdown {
+    width: 95%;
+    display: flex;
+    align-items: center;
 }
 
 .playlistify, .log-out {
     font-weight: 600;
     width: 50%;
     margin: 0;
+    font-size: 15px;
+    display: flex;
+    text-decoration: none;
 }
 
-.playlistify {
-    text-align: left;
+.playlistify { 
+    text-align: left; 
+    float: left;
+    justify-content: left;
 }
-
-.log-out {
-    text-align: right;
+.log-out { 
+    text-align: right; 
+    float: right;
+    justify-content: right;
 }
 
 /* footer */
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: top;
+    align-items: flex-start;
     text-align: center;
     font-weight: 400;
 }
 
 .made-with-love {
-    height: 100%;
     margin: 0;
+    font-size: 12px;
+    justify-content: center;
 }
+
+/* Generate by */
+.dropdown {
+    margin: 0 auto;
+    width: 33%;
+    display: inline-block;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.dropdown__face, .dropdown__items {
+    background-color: #ffffff2f;
+    padding: 6px;
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 150px;
+    z-index: 2;
+}
+
+.dropdown__face {
+    display: block;
+    position: relative;
+}
+
+.dropdown__text {
+    font-weight: 600;
+    font-size: 14px;;
+    margin-left: 7%;
+}
+
+.dropdown__arrow {
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg) translateY(-50%);
+    transform-origin: right;
+}
+
+.dropdown__items {
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 138px;
+    display: block;
+    justify-content: left;
+
+    padding: 12px;
+
+    background-color: #ffffff00;
+    border-radius: 15px;
+    border: 1px solid white;
+    
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    
+    transition: all 0.2s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+
+.dropdown__items a {
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown__items {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown__face {
+    border: 1px solid white;
+}
+
+.page-nav-empty {
+    display: block;
+    margin-bottom: 27px;
+}
+
+.page-nav-prompt {
+    margin-bottom: 9px;
+}
+
+/* main */
 
 .main {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
-    width: 70%;
+    height: 86%;
+    width: 100%;
+    z-index: 0;
+}
+
+.main-content {
+    width: 100%;
 }
 
 h1 {
+    font-size: 44px;
+    position: relative;
     text-align: center;
+}
+
+.search {
+    position: relative;
+    margin: 0 auto;
+    padding: 2px 27px;
+
+    background-color: #ffffff2f;
+    border-radius: 50px;
+    width: 470px;
+    border: 1.5px white solid;
+
+    font-weight: 500;
+}
+
+.search p {
+    display: inline-block;
+    width: 90%;
+}
+
+.go {
+    position: relative;
+    display: inline-block;
+    width: 9%;
+    margin: auto;
+
+    color: white;
+    text-align: right;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/* Screen size */
+
+@media screen and (max-width: 400px) {
+    .playlistify, .log-out {
+        display: none !important;
+    }
+
+    .dropdown {
+        width: 95%;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    header, footer {
+        display: none !important;
+    }
+}
+
+/* Anchor */
+
+a {
+    color: white;
+    display: inline;
+}
+
+a:hover {
+    color: #ffffffaf
 }
